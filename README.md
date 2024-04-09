@@ -36,7 +36,9 @@
 
 ## Usage
 
-Copy the contents of the desired flavor from [themes/](./themes) into `~/.config/mpv`.
+1. Choose a flavor from [`./themes/`](./themes).
+2. Choose an accent from the flavor directory
+3. Copy the contents of the accent directory into `~/.config/mpv`.
 
 ## 💝 Thanks to
 
