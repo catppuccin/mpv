@@ -11,7 +11,7 @@ whiskers:
 {% macro bgr(hex) %}{{self::hex_byte(hex=hex, index=3)}}{{self::hex_byte(hex=hex, index=2)}}{{self::hex_byte(hex=hex, index=1)}}{% endmacro bgr %}
 {%- set palette = flavor.colors -%}
 {%- if variant == "mpv" -%} {#- Main theme file -#}
-background='#{{ palette.base.hex }}'
+background-color='#{{ palette.base.hex }}'
 osd-back-color='#{{ palette.overlay0.hex }}'
 osd-border-color='#{{ palette.crust.hex }}'
 osd-color='#{{ palette.text.hex }}'
