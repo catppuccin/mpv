@@ -7,8 +7,8 @@ whiskers:
     - accent
   filename: "themes/{{flavor.identifier}}/{{accent}}/{{variant}}.conf"
 ---
-{% macro hex_byte(hex, index) %}{{ hex | split(pat="") | slice(start=(index * 2 - 1), end=(index * 2 + 1)) | join() }}{% endmacro hex_byte %}
-{% macro bgr(hex) %}{{self::hex_byte(hex=hex, index=3)}}{{self::hex_byte(hex=hex, index=2)}}{{self::hex_byte(hex=hex, index=1)}}{% endmacro bgr %}
+{%- macro hex_byte(hex, index) -%}{{ hex | split(pat="") | slice(start=(index * 2 - 1), end=(index * 2 + 1)) | join() }}{%- endmacro hex_byte -%}
+{%- macro bgr(hex) -%}{{self::hex_byte(hex=hex, index=3)}}{{self::hex_byte(hex=hex, index=2)}}{{self::hex_byte(hex=hex, index=1)}}{%- endmacro bgr -%}
 {%- set palette = flavor.colors -%}
 {%- if variant == "mpv" -%} {#- Main theme file -#}
 background-color='#{{ palette.base.hex }}'
