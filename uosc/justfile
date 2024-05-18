@@ -5,14 +5,12 @@ _default:
 # Variables
 output := "themes"
 whiskers_cmd := "whiskers"
-template_path := "mpv.tera"
+template_path := "uosc.tera"
 
 # Remove all files in the output directory
 clean:
-    just uosc/clean
     rm -rfv {{output}}
 
 # Generate all four flavors
 all:
-    just uosc/all
     {{whiskers_cmd}} {{template_path}}
