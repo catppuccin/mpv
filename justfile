@@ -1,18 +1,8 @@
-# Print out all recipes when running `just`
 _default:
-    @just --list
+  @just --list
 
-# Variables
-output := "themes"
-whiskers_cmd := "whiskers"
-template_path := "mpv.tera"
+build:
+  whiskers mpv.tera
 
-# Remove all files in the output directory
-clean:
-    just uosc/clean
-    rm -rfv {{output}}
-
-# Generate all four flavors
-all:
-    just uosc/all
-    {{whiskers_cmd}} {{template_path}}
+all: build
+  just uosc/build
