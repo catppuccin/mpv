@@ -1,9 +1,6 @@
 _default:
   @just --list
 
-clean:
-  rm -rfv themes/
-
 build:
   whiskers mpv.tera
 
