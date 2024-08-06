@@ -1,10 +1,9 @@
 ---
 whiskers:
-  version: 2.1.0
+  version: 2.3.0
   matrix:
     - flavor
     - accent
   filename: "themes/{{flavor.identifier}}/{{accent}}/script-opts/uosc.conf"
 ---
-{%- set palette = flavor.colors -%}
-color=foreground={{ palette[accent].hex }},foreground_text={{ palette.surface0.hex }},background={{ palette.base.hex }},background_text={{ palette.text.hex }},curtain={{ palette.mantle.hex }},success={{ palette.green.hex }},error={{ palette.red.hex }}
+color=foreground={{ flavor.colors[accent].hex }},foreground_text={{ surface0.hex }},background={{ base.hex }},background_text={{ text.hex }},curtain={{ mantle.hex }},success={{ green.hex }},error={{ red.hex }}

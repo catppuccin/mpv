@@ -1,6 +1,6 @@
 ---
 whiskers:
-  version: 2.1.0
+  version: 2.3.0
   matrix:
     - variant: ["mpv", "script-opts/stats"]
     - flavor
@@ -9,18 +9,17 @@ whiskers:
 ---
 {%- macro hex_byte(hex, index) -%}{{ hex | split(pat="") | slice(start=(index * 2 - 1), end=(index * 2 + 1)) | join() }}{%- endmacro hex_byte -%}
 {%- macro bgr(hex) -%}{{self::hex_byte(hex=hex, index=3)}}{{self::hex_byte(hex=hex, index=2)}}{{self::hex_byte(hex=hex, index=1)}}{%- endmacro bgr -%}
-{%- set palette = flavor.colors -%}
 {%- if variant == "mpv" -%} {#- Main theme file -#}
-background-color='#{{ palette.base.hex }}'
-osd-back-color='#{{ palette.overlay0.hex }}'
-osd-border-color='#{{ palette.crust.hex }}'
-osd-color='#{{ palette.text.hex }}'
-osd-shadow-color='#{{ palette.base.hex }}'
+background-color='#{{ base.hex }}'
+osd-back-color='#{{ overlay0.hex }}'
+osd-border-color='#{{ crust.hex }}'
+osd-color='#{{ text.hex }}'
+osd-shadow-color='#{{ base.hex }}'
 {%- else -%} {#- Stats script file -#}
 # Colors are in #BBGGRR format
-border_color={{ self::bgr(hex=palette.mantle.hex) }}
-font_color={{ self::bgr(hex=palette.text.hex) }}
-plot_bg_border_color={{ self::bgr(hex=palette[accent].hex) }}
-plot_bg_color={{ self::bgr(hex=palette.mantle.hex) }}
-plot_color={{ self::bgr(hex=palette[accent].hex) }}
+border_color={{ self::bgr(hex=mantle.hex) }}
+font_color={{ self::bgr(hex=text.hex) }}
+plot_bg_border_color={{ self::bgr(hex=flavor.colors[accent].hex) }}
+plot_bg_color={{ self::bgr(hex=mantle.hex) }}
+plot_color={{ self::bgr(hex=flavor.colors[accent].hex) }}
 {%- endif -%}
