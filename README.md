@@ -36,11 +36,32 @@
 
 ## Usage
 
-1. Copy the contents of the folder containing the flavor and accent combination of your choice from [`themes/`](./themes/) into `~/.config/mpv`.
+1. Copy the file containing the flavor and accent combination of your choice from [`themes/`](./themes/) to `~/.config/mpv/mpv.conf`.
 
 ## Script support
 
-- [uosc](./uosc)
+<details>
+<summary><a href="https://github.com/tomasklaen/uosc">uosc</a></summary>
+<p align="center">
+	<img src="./assets/scripts/uosc/preview.webp"/>
+</p>
+<details>
+<summary>🌻 Latte</summary>
+<img src="./assets/scripts/uosc/latte.webp"/>
+</details>
+<details>
+<summary>🪴 Frappé</summary>
+<img src="./assets/scripts/uosc/frappe.webp"/>
+</details>
+<details>
+<summary>🌺 Macchiato</summary>
+<img src="./assets/scripts/uosc/macchiato.webp"/>
+</details>
+<details>
+<summary>🌿 Mocha</summary>
+<img src="./assets/scripts/uosc/mocha.webp"/>
+</details>
+</details>
 
 ## 💝 Thanks to
 
