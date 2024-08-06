@@ -1,8 +1,0 @@
-_default:
-  @just --list
-
-clean:
-  rm -rfv themes/
-
-build:
-  whiskers uosc.tera
