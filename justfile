@@ -3,6 +3,3 @@ _default:
 
 build:
   whiskers mpv.tera
-
-all: build
-  just uosc/build
